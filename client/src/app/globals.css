@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling for internal anchor navigation */
+html { scroll-behavior: smooth; }
+
+/* Ensure anchored sections account for sticky header height */
+#projects,
+#services,
+#contact {
+  scroll-margin-top: 96px; /* adjust if header height changes */
+}
+
+@layer base {
+  :root {
+    --bg-light: #f8fafc;
+    --bg-dark: #0f172a;
+  }
+
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  .dark body {
+    background-color: #0f172a;
+    color: #f1f5f9;
+  }
+}
